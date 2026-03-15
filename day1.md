@@ -1,10 +1,16 @@
-Basic Programming Problems
-Flowchart and Pseudocode
+# Basic Programming Problems
 
-This document contains Flowcharts (Mermaid) and Pseudocode for beginner programming problems.
+### Flowchart and Pseudocode
 
-1. Leap Year Check
-Flowchart
+This document contains **Flowcharts (Mermaid) and Pseudocode** for beginner programming problems.
+
+---
+
+# 1. Leap Year Check
+
+## Flowchart
+
+```mermaid
 flowchart TD
 A[Start] --> B[Input Year]
 B --> C{Year mod 4 == 0?}
@@ -17,7 +23,11 @@ E -- No --> D
 
 F --> G[End]
 D --> G
-Pseudocode
+```
+
+## Pseudocode
+
+```
 START
 
 INPUT year
@@ -33,15 +43,26 @@ ELSE
 ENDIF
 
 END
-2. Sum of Two Numbers
-Flowchart
+```
+
+---
+
+# 2. Sum of Two Numbers
+
+## Flowchart
+
+```mermaid
 flowchart TD
 A[Start] --> B[Input Number1]
 B --> C[Input Number2]
 C --> D[Sum = Number1 + Number2]
 D --> E[Print Sum]
 E --> F[End]
-Pseudocode
+```
+
+## Pseudocode
+
+```
 START
 
 INPUT number1
@@ -52,8 +73,15 @@ sum = number1 + number2
 PRINT sum
 
 END
-3. Multiplication Table
-Flowchart
+```
+
+---
+
+# 3. Multiplication Table
+
+## Flowchart
+
+```mermaid
 flowchart TD
 A[Start] --> B[Input Number]
 B --> C[Set i = 1]
@@ -65,7 +93,11 @@ D -- Yes --> E[Print number * i]
 
 E --> F[i = i + 1]
 F --> D
-Pseudocode
+```
+
+## Pseudocode
+
+```
 START
 
 INPUT number
@@ -77,8 +109,15 @@ WHILE i <= 10
 END WHILE
 
 END
-4. HCF and LCM
-Flowchart
+```
+
+---
+
+# 4. HCF and LCM
+
+## Flowchart
+
+```mermaid
 flowchart TD
 A[Start] --> B[Input a and b]
 B --> C[Set x = a, y = b]
@@ -96,7 +135,11 @@ H --> D
 E --> I[LCM = (a * b) / HCF]
 I --> J[Print HCF and LCM]
 J --> K[End]
-Pseudocode
+```
+
+## Pseudocode
+
+```
 START
 
 INPUT a
@@ -118,8 +161,15 @@ PRINT HCF
 PRINT LCM
 
 END
-5. Sum Until 'x'
-Flowchart
+```
+
+---
+
+# 5. Sum Until 'x'
+
+## Flowchart
+
+```mermaid
 flowchart TD
 A[Start] --> B[sum = 0]
 
@@ -132,7 +182,11 @@ F --> G[End]
 
 D -- No --> E[sum = sum + value]
 E --> C
-Pseudocode
+```
+
+## Pseudocode
+
+```
 START
 
 sum = 0
@@ -151,3 +205,4 @@ UNTIL value == x
 PRINT sum
 
 END
+```

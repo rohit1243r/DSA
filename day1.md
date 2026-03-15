@@ -1,33 +1,29 @@
-# Basic Programming Problems – Flowchart and Pseudocode
+Basic Programming Problems
+Flowchart and Pseudocode
 
-This document contains **Flowcharts and Pseudocode** for beginner programming problems.
+This document contains Flowcharts (Mermaid) and Pseudocode for beginner programming problems.
 
----
-
-# 1️⃣ Leap Year Check
-
-## Flowchart
-
-```mermaid
+1. Leap Year Check
+Flowchart
 flowchart TD
 A[Start] --> B[Input Year]
-B --> C{Year % 4 == 0?}
+B --> C{Year mod 4 == 0?}
+
 C -- No --> D[Not Leap Year]
-C -- Yes --> E{Year % 100 != 0 OR Year % 400 == 0?}
+C -- Yes --> E{Year mod 100 != 0 OR Year mod 400 == 0?}
+
 E -- Yes --> F[Leap Year]
 E -- No --> D
+
 F --> G[End]
 D --> G
-```
-
-## Pseudocode
-
-```
+Pseudocode
 START
+
 INPUT year
 
-IF year % 4 == 0 THEN
-    IF year % 100 != 0 OR year % 400 == 0 THEN
+IF year mod 4 == 0 THEN
+    IF year mod 100 != 0 OR year mod 400 == 0 THEN
         PRINT "Leap Year"
     ELSE
         PRINT "Not Leap Year"
@@ -37,26 +33,15 @@ ELSE
 ENDIF
 
 END
-```
-
----
-
-# 2️⃣ Sum of Two Numbers
-
-## Flowchart
-
-```mermaid
+2. Sum of Two Numbers
+Flowchart
 flowchart TD
 A[Start] --> B[Input Number1]
 B --> C[Input Number2]
 C --> D[Sum = Number1 + Number2]
 D --> E[Print Sum]
 E --> F[End]
-```
-
-## Pseudocode
-
-```
+Pseudocode
 START
 
 INPUT number1
@@ -67,65 +52,51 @@ sum = number1 + number2
 PRINT sum
 
 END
-```
-
----
-
-# 3️⃣ Multiplication Table
-
-## Flowchart
-
-```mermaid
+3. Multiplication Table
+Flowchart
 flowchart TD
 A[Start] --> B[Input Number]
 B --> C[Set i = 1]
-C --> D{i ≤ 10 ?}
+
+C --> D{Is i <= 10 ?}
+
 D -- No --> H[End]
-D -- Yes --> E[Print number × i]
+D -- Yes --> E[Print number * i]
+
 E --> F[i = i + 1]
 F --> D
-```
-
-## Pseudocode
-
-```
+Pseudocode
 START
 
 INPUT number
 SET i = 1
 
 WHILE i <= 10
-    PRINT number × i
+    PRINT number * i
     i = i + 1
 END WHILE
 
 END
-```
-
----
-
-# 4️⃣ HCF and LCM
-
-## Flowchart
-
-```mermaid
+4. HCF and LCM
+Flowchart
 flowchart TD
-A[Start] --> B[Input a, b]
-B --> C[x = a, y = b]
-C --> D{y ≠ 0 ?}
+A[Start] --> B[Input a and b]
+B --> C[Set x = a, y = b]
+
+C --> D{Is y != 0 ?}
+
 D -- No --> E[HCF = x]
 D -- Yes --> F[temp = y]
-F --> G[y = x % y]
+
+F --> G[y = x mod y]
 G --> H[x = temp]
+
 H --> D
-E --> I[LCM = (a × b) / HCF]
+
+E --> I[LCM = (a * b) / HCF]
 I --> J[Print HCF and LCM]
 J --> K[End]
-```
-
-## Pseudocode
-
-```
+Pseudocode
 START
 
 INPUT a
@@ -134,9 +105,9 @@ INPUT b
 x = a
 y = b
 
-WHILE y ≠ 0
+WHILE y != 0
     temp = y
-    y = x % y
+    y = x mod y
     x = temp
 END WHILE
 
@@ -147,28 +118,21 @@ PRINT HCF
 PRINT LCM
 
 END
-```
-
----
-
-# 5️⃣ Sum Until 'x'
-
-## Flowchart
-
-```mermaid
+5. Sum Until 'x'
+Flowchart
 flowchart TD
 A[Start] --> B[sum = 0]
+
 B --> C[Input value]
+
 C --> D{value == x ?}
+
 D -- Yes --> F[Print sum]
 F --> G[End]
+
 D -- No --> E[sum = sum + value]
 E --> C
-```
-
-## Pseudocode
-
-```
+Pseudocode
 START
 
 sum = 0
@@ -176,15 +140,14 @@ sum = 0
 REPEAT
     INPUT value
 
-    IF value == 'x'
+    IF value == x THEN
         BREAK
     ENDIF
 
     sum = sum + value
 
-UNTIL value == 'x'
+UNTIL value == x
 
 PRINT sum
 
 END
-```

@@ -1,6 +1,6 @@
 # 🚀 Day 3 DSA Challenge (Java)
 
-This repository contains solutions for **Day 2 of the DSA Challenge** using **Java**.
+This repository contains solutions for **Day 3 of the DSA Challenge** using **Java**.
 The programs focus on **Loops, Conditional Statements**.
 
 ---

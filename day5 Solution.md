@@ -30,7 +30,8 @@ public class Solution{
         int n =sc.nextInt();
         boolean x = isPalindrome(n);
         System.out.println(x);
-        sc.close();
+        sc.close(); 
+        
     }
 }
 ```

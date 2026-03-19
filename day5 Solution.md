@@ -31,7 +31,7 @@ public class Solution{
         boolean x = isPalindrome(n);
         System.out.println(x);
         sc.close(); 
-        
+
     }
 }
 ```
@@ -197,3 +197,189 @@ public class Solution {
 }
 ```
 
+---
+
+# 8️⃣ Sum of negative numbers, sum of positive even numbers, and sum of positive odd numbers from a list
+
+```java
+import java.util.Scanner;
+
+public class Solution {
+    public static void sumOfList() {
+        int son = 0, sope = 0, sopo = 0;
+        Scanner in = new Scanner(System.in);
+        while (true) {
+            int n = in.nextInt();
+            if(n == 0){
+                break;
+            }
+            if (n < 0) {
+                son += n;
+            }else if(n % 2 == 0){
+                sope += n;
+            }else{
+                sopo += n;
+            }
+        }
+        System.out.println("Sum of negative number : "+son);
+        System.out.println("Sum of positive even number : "+sope);
+        System.out.println("Sum of positive odd number : "+sopo);
+        in.close();
+    }
+    public static void main(String[] args) {
+        sumOfList();        
+    }
+}
+```
+
+---
+
+# 9️⃣ Define two methods to print the maximum and minimum among three numbers entered by the user
+
+```java
+import java.util.Scanner;
+
+public class Solution {
+    public static int max(int a, int b, int c) {
+        int max = Integer.MIN_VALUE;
+        if(a > max){
+            max = a;
+        }
+        if(b > max) {
+            max = b;
+        }
+        if(c > max){
+            max = c;
+        }
+        return max;
+    }
+    public static int min(int a, int b, int c){
+        int min = Integer.MAX_VALUE;
+        if(a < min){
+            min = a;
+        }
+        if(b < min){
+            min = b;
+        }
+        if(c < min){
+            min = c;
+        }
+        return min;
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int c = in.nextInt();   
+        int max = max(a, b, c);
+        int min = min(a, b, c);     
+        System.out.println("Maximum : "+max);
+        System.out.println("Minimum: "+min);
+        in.close();
+    }
+}
+```
+
+---
+
+# 🔟 Define a method to find whether a given number is even or odd
+
+```java
+import java.util.Scanner;
+
+public class Solution {
+    public static boolean oddEven(int a) {
+        return a % 2 == 0;
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        boolean check = oddEven(a);
+        if(check){
+           System.out.println("Even"); 
+        }else{
+            System.out.println("Odd");
+        }
+        in.close();
+    }
+}
+```
+
+---
+
+# 1️⃣1️⃣ Voting Eligibility
+
+```java
+import java.util.Scanner;
+
+public class Solution {
+    public static boolean votingEligibility(int age) {
+        return age >= 18;
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int age = in.nextInt();
+        boolean check = votingEligibility(age);
+        System.out.println(check);
+        in.close();
+    }
+}
+```
+
+---
+
+# 1️⃣2️⃣ Write a method that takes two numbers as input and returns their sum
+
+```java
+import java.util.Scanner;
+
+public class Solution {
+    public static int sum() {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        in.close();
+        return a+b;        
+    }
+    public static void main(String[] args) {
+        int sum = sum();
+        System.out.println(sum);
+    }
+}
+```
+
+---
+
+# 1️⃣3️⃣  Sum of N numbers entered by the user — list terminates when user enters 0
+
+```java
+import java.util.Scanner;
+
+public class Solution {
+    public static int sum() {
+        Scanner in = new Scanner(System.in);
+        int sum = 0;
+        while(true){
+            int n = in.nextInt();
+            if(n == 0){
+                break;
+            }
+            sum+=n;
+        }
+        in.close();
+        return sum;        
+    }
+    public static void main(String[] args) {
+        int sum = sum();
+        System.out.println(sum);
+    }
+}
+```
+
+---
+
+# 🎯 Challenge
+
+This repository is part of my **60-70 Days of Java / DSA Challenge** where I solve coding problems daily to improve my **problem-solving and programming skills**.
+
+⭐ If you like this repository, consider **starring it!**
